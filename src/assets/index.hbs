@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles/all.min.css">
+  <link rel="stylesheet" href="styles/animate.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="../index.js"></script>
+  <title>IN.EX</title>
+</head>
+
+<body>
+  <header class="header">
+    <a href="#" class="logo">IN.EX</a>
+    <nav>
+      <ul class="menu">
+        <li class="menu__item">
+          <a href="#" class="home-link" onclick="return false">Home</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="shop-link" onclick="return false">Shop</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="about-link" onclick="return false">About</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="forum-link" onclick="return false">Forum</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="contact-link" onclick="return false">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="basket">
+      <button class="basket-content">
+        <svg>
+          <use href="#svg-basket"></use>
+        </svg>
+        <span class="basket__count">0</span>
+      </button>
+      <button class="burger visually-hidden">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div class="cart visually-hidden">
+      <div class="cart-card">
+        <div class="cart-card__head">
+          <button class="cart-btn"><i class="fas fa-chevron-left"></i></button>
+          Cart
+        </div>
+        <div class="cart-card__body">
+          <p>Cart is empty</p>
+        </div>
+        <div class="card-total">
+          <p>Subtotal</p>
+          <p>$18.00</p>
+        </div>
+        <a class="btn-cart">View Cart</a>
+
+      </div>
+    </div>
+
+    <div class="burger-menu visually-hidden">
+      <ul>
+        <li class="burger-menu__item">
+          <a href="#" class="home-link" onclick="return false">Home</a>
+        </li>
+        <li class="burger-menu__item">
+          <a href="#" class="shop-link" onclick="return false">Shop</a>
+        </li>
+        <li class="burger-menu__item">
+          <a href="#" class="about-link" onclick="return false">About</a>
+        </li>
+        <li class="burger-menu__item">
+          <a href="#" class="forum-link" onclick="return false">Forum</a>
+        </li>
+        <li class="burger-menu__item">
+          <a href="#" class="contact-link" onclick="return false">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="app"></main>
+
+  <div class="q-view visually-hidden">
+    <div class="q-view-card">
+      <button class="close-btn" id="close-btn-q"></button>
+      <div class="q-view-card-image">
+        <div class="q-view-card__img">
+          <img src="#" alt="Photo">
+        </div>
+      </div>
+      <div class="q-view-card-info">
+        <h3 class="q-view-card-info__title">Seamless Bra</h3>
+        <p class="q-view-card-info__id">SKU: <span>0004</span></p>
+        <p>
+          <span class="q-view-card-info__price">$25.00</span>
+          <span><a href="#" class="q-view-card-info__link">View Full Details</a></span>
+        </p>
+        <label for="select-size">Size</label>
+        <div class="select">
+          <select name="size" id="select-size">
+            <option value="s">Small</option>
+            <option value="l">Large</option>
+          </select>
+        </div>
+        <label for="input-quantity">Quantity</label>
+        <span id="input-number">
+          <input type="number" value="1" id="input-quantity" min="1" onkeypress="return false">
+          <span onclick="this.previousElementSibling.stepUp()"></span>
+          <span onclick="this.previousElementSibling.previousElementSibling.stepDown()"></span>
+        </span>
+        <input type="button" id="add-btn" value="Add To Card">
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+
+      <div class="list">
+        <a href="#" class="list__title">IN.EX</a>
+        <ul>
+          <li class="list__item">
+            <a href="#">Home</a>
+          </li>
+          <li class="list__item">
+            <a href="#">Shop</a>
+          </li>
+          <li class="list__item">
+            <a href="#">About</a>
+          </li>
+          <li class="list__item">
+            <a href="#">Forum</a>
+          </li>
+          <li class="list__item">
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="list">
+        <a href="#" class="list__title">Experience</a>
+        <ul>
+          <li class="list__item">
+            <a href="#">FAQ</a>
+          </li>
+          <li class="list__item">
+            <a href="#">Shipping & Returns</a>
+          </li>
+          <li class="list__item">
+            <a href="#">Store Policy</a>
+          </li>
+          <li class="list__item">
+            <a href="#">Payment Methods</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="list">
+        <a href="#" class="list__title">Follow Us</a>
+        <ul>
+          <li class="list__item">
+            <a href="#">Facebook</a>
+          </li>
+          <li class="list__item">
+            <a href="#">Twitter</a>
+          </li>
+          <li class="list__item">
+            <a href="#">Instagram</a>
+          </li>
+          <li class="list__item">
+            <a href="#">Pinterest</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="list">
+        <a href="#" class="list__title">Join our Newsletter</a>
+        <form>
+          <input type="email" placeholder="Enter your email here*">
+          <input type="submit" value="Subscribe Now">
+        </form>
+      </div>
+
+    </div>
+  </footer>
+
+  <div class="visually-hidden">
+    <svg width="0" height="0" style="position:absolute">
+
+      <symbol id="svg-basket" viewBox="221.4 359.3 267 123" width="170%" height="100%">
+        <rect x="221.4" y="403.7" width="152.4" height="6"></rect>
+        <path
+          d="M345.9 482.3h-96.4c-1.2 0-2.4-1.2-3-2.4l-19.6-70.8 6-1.8 19.1 68.5h92.3l19-68.5 6 1.8 -19.6 70.8C348.2 481.1 347 482.3 345.9 482.3z">
+        </path>
+        <rect x="259" y="380.1" transform="matrix(-0.527 -0.8498 0.8498 -0.527 109.9867 827.3946)" width="52.4"
+          height="6"></rect>
+        <rect x="292.3" y="424.5" width="10.7" height="10.7"></rect>
+        <rect x="315.5" y="424.5" width="10.7" height="10.7"></rect>
+        <rect x="269.1" y="424.5" width="10.7" height="10.7"></rect>
+        <rect x="292.3" y="447.7" width="10.7" height="10.7"></rect>
+        <rect x="315.5" y="447.7" width="10.7" height="10.7"></rect>
+        <rect x="269.1" y="447.7" width="10.7" height="10.7"></rect>
+      </symbol>
+
+      <svg id="svg-arrow" viewBox="0 0 31.49 31.49">
+        <path d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111
+	C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587
+	c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z" />
+      </svg>
+
+    </svg>
+  </div>
+</body>
+
+</html>

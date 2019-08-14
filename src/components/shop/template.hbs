@@ -1,0 +1,209 @@
+<section class="hero-slider">
+  <div class="hero-slider-left">
+    <h1 class="hero-slider-left__title">Shop</h1>
+  </div>
+  <div class="slick-slider" id="test">
+    <img src="\images/slider4.jpg" alt="">
+  </div>
+</section>
+
+<section class="shop">
+  <div class="container">
+    <div class="filter">
+      <h2 class="filter__title">Filter by <i class="far fa-times-circle"></i></h2>
+      <div class="filter-head">
+        <h3>Collection</h3>
+        <i class="plus active"><span></span><span></span></i>
+      </div>
+      <div class="filter-body">
+        <ul class="filter-list filter-collection">
+          <li class="filter-list__item">
+            <a href="#" class="allProducts active-collection-btn" onclick="return false">All</a>
+          </li>
+          <li class="filter-list__item">
+            <a href="#" class="allBras" onclick="return false">Sports Bras</a>
+          </li>
+          <li class="filter-list__item">
+            <a href="#" class="allTops" onclick="return false">Tank Tops</a>
+          </li>
+          <li class="filter-list__item">
+            <a href="#" class="allLeggins" onclick="return false">Leggins</a>
+          </li>
+          <li class="filter-list__item">
+            <a href="#" class="allJackets" onclick="return false">Jackets</a>
+          </li>
+          <li class="filter-list__item">
+            <a href="#" class="allSports" onclick="return false">Sports</a>
+          </li>
+          <li class="filter-list__item">
+            <a href="#" class="allNew" onclick="return false">New Arrivals</a>
+          </li>
+          <li class="filter-list__item">
+            <a href="#" class="allBest" onclick="return false">Best Sellers</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="filter-head filter-head-slider">
+        <h3>Price</h3>
+        <i class="plus"><span></span><span></span></i>
+      </div>
+      <div class="filter-body visually-hidden">
+        <div class="slider">
+          <div class="bar">
+            <div class="lp" data-pos="0"></div>
+            <div class="rp" data-pos="1"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="filter-head">
+        <h3>Color</h3>
+        <i class="plus"><span></span><span></span></i>
+      </div>
+      <div class="filter-body filter-color visually-hidden">
+        <button class="blue"></button>
+        <button class="pink"></button>
+        <button class="green"></button>
+        <button class="gray"></button>
+        <button class="orange"></button>
+        <button class="red"></button>
+        <button class="purple"></button>
+      </div>
+
+      <div class="filter-head">
+        <h3>Size</h3>
+        <i class="plus"><span></span><span></span></i>
+      </div>
+      <div class="filter-body visually-hidden">
+        <ul class="filter-list">
+          <li class="filter-list__item">
+            <label class="cb-container">Large
+              <input type="checkbox" id="ch-large">
+              <span class="checkmark"></span>
+            </label>
+          </li>
+          <li class="filter-list__item">
+            <label class="cb-container">Medium
+              <input type="checkbox" id="ch-medium">
+              <span class="checkmark"></span>
+            </label>
+          </li>
+          <li class="filter-list__item">
+            <label class="cb-container">Small
+              <input type="checkbox" id="ch-small">
+              <span class="checkmark"></span>
+            </label>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="shop-container">
+
+      <div class="sort">
+        <button class="filter-btn">Filter</button>
+        <div class="select">
+          <select name="size" id="select-sort">
+            <option selected disabled>Sort by</option>
+            <option>Newest</option>
+            <option id="sort-price">Price (low to high)</option>
+            <option>Price (high to low)</option>
+            <option>Name A-Z</option>
+            <option>Name Z-A</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="products-container">
+
+      \{{#each products}}
+      <div class="item active-filter active-price" data-price="\{{price}}" data-name="\{{name}}" 
+      data-id="\{{id}}" data-tag="\{{tag}}" data-type="\{{type}}" data-color="\{{color}}">
+        <div class="item__image">
+          \{{{img src}}}
+          \{{#if tag}}
+          <div class="item--tag">
+            <p>\{{tag}}</p>
+          </div>
+          \{{/if}}
+          <a class="item--hover">
+            <p>Quick View</p>
+          </a>
+        </div>
+        <div class="item-info">
+          <h4 class="item-info__name">\{{name}}</h4>
+          <p class="item-info__price">\{{price}}</p>
+        </div>
+      </div>
+      \{{/each}}
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script defer>
+  var twobombSlider = (function () {
+  var drag = false;
+  var values = [];
+  
+  $(".slider").each(function (i, e) {
+    updateView(e);
+  });
+
+  $(".slider>.bar>.lp,.slider>.bar>.rp").bind("mousedown", function () {
+    drag = $(this);
+  })
+  
+  $(document).bind("mousemove", function (e) {
+    if (!drag)
+      return;
+    var x = (e.pageX - $(drag).outerWidth() / 2 - $(drag).parent().parent().offset().left) / $(drag).parent().parent().outerWidth();
+    if (x < 0) x = 0;
+    if (x > 1) x = 1;
+    var rp = $(drag).parent().find(".rp");
+    var lp = $(drag).parent().find(".lp");
+    if ($(drag).hasClass("lp") && x > $(rp).attr("data-pos")) {
+      $(rp).attr("data-pos", x);
+    }
+    if ($(drag).hasClass("rp") && x < $(lp).attr("data-pos")) {
+      $(lp).attr("data-pos", x);
+    }
+    $(drag).attr("data-pos", x);
+    updateView($(drag).parent().parent());
+  });
+  $(document).bind("mouseup", function () {
+    drag = false;
+  });
+
+  function updateView(slider) {
+    var startVal = parseInt($(slider).find(".bar").data("start"));
+    var endVal = parseInt($(slider).find(".bar").data("end"));
+    if (startVal > endVal)
+      endVal = startVal;
+    startVal = startVal || 0;
+    endVal = endVal || 100;
+    var values = [];
+    for (var i = startVal; i <= endVal; i++)
+      values.push(i);
+    var l = $(slider).find(".lp").attr("data-pos");
+    var r = $(slider).find(".rp").attr("data-pos");
+    var x = $(slider).outerWidth() * l;
+    var w = (r - l) * $(slider).outerWidth();
+    $(slider).find(".bar").css({
+      left: x + "px",
+      width: w + "px"
+    });
+    var index = Math.round(values.length * l);
+    if (index >= values.length)
+      index = values.length - 1;
+    $(slider).find(".lp").html("<span>" + values[index] + "</span>");
+    index = Math.round(values.length * r);
+    if (index >= values.length)
+      index = values.length - 1;
+    $(slider).find(".rp").html("<span>" + values[index] + "</span>");
+  }
+})();
+</script>

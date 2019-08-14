@@ -1,0 +1,118 @@
+<section class="hero">
+  <div class="hero-main">
+    <div class="hero-main-content">
+      <h1 class="hero-main-content__title wow fadeIn" data-wow-duration="2.5s">
+        <span>IT'S TIME</span>
+        <span>TO STEP UP</span>
+        <span>YOUR GAME</span>
+      </h1>
+      <a href="#" class="hero-main-content__btn wow fadeIn">Shop now</a>
+    </div>
+
+  </div>
+  </div>
+  <div class="hero-paralax">
+    <div class="hero-paralax__img">
+      <img src="\images/hero-portret.jpg" alt="">
+    </div>
+  </div>
+</section>
+
+<section class="articles">
+  <div class="container">
+    <div class="articles-container wow fadeIn">
+      <div class="article">
+        <img src="\images/article1.jpg" alt="">
+        <div class="article-box wow fadeInLeft">
+          <div class="article-box-content">
+            <h3 class="article-box__title">
+              <span>Shop new</span>
+              <span>arrivals</span>
+            </h3>
+            <a href="#" class="wow fadeInUp" data-wow-delay="0.4s">
+              <svg>
+                <use xlink:href="#svg-arrow"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="article">
+        <img src="\images/article2.jpg" alt="">
+        <div class="article-box wow fadeInLeft">
+          <div class="article-box-content">
+            <h3 class="article-box__title">
+              <span>Shop new</span>
+              <span>bestsellers</span>
+            </h3>
+            <a href="#" class="wow fadeInUp" data-wow-delay="0.4s">
+              <svg>
+                <use xlink:href="#svg-arrow"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="article">
+        <img src="\images/article3.jpg" alt="">
+        <div class="article-box wow fadeInLeft">
+          <div class="article-box-content">
+            <h3 class="article-box__title">
+              <span>Join our</span>
+              <span>community</span>
+            </h3>
+            <a href="#" class="wow fadeInUp" data-wow-delay="0.4s">
+              <svg>
+                <use xlink:href="#svg-arrow"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="big-article">
+    <div class="big-article-info wow fadeInLeft">
+      <h2 class="big-article-info__title">
+        <span>Workout</span>
+        <span>anytime,</span>
+        <span>anywhere</span>
+      </h2>
+      <p class="big-article-info__text">
+        I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double
+        click me to add your own content and make changes to the font.
+      </p>
+      <a href="#" class="btn">Read More</a>
+    </div>
+    <div class="big-article-image wow fadeInUp">
+      <img src="\images/girl.jpg" alt="girl">
+    </div>
+  </div>
+</section>
+
+<section class="arrivals">
+  <h3 class="arrivals__title wow fadeIn">New arrivals</h3>
+  <div class="container wow fadeIn" id="arrivals">
+    \{{#eachForIndex products}}
+    <div class="item" data-price="\{{price}}" data-name="\{{name}}" data-id="\{{id}}" data-tag="\{{tag}}">
+      <div class="item__image">
+        \{{{img src}}}
+        <div class="item--tag">
+          <p>\{{tag}}</p>
+        </div>
+        <a class="item--hover">
+          <p>Quick View</p>
+        </a>
+      </div>
+      <div class="item-info">
+        <h4 class="item-info__name">\{{name}}</h4>
+        <p class="item-info__price">\{{price}}</p>
+      </div>
+    </div>
+    \{{/eachForIndex}}
+  </div>
+  <a href="#" class="btn wow fadeIn" data-wow-delay="0.2s">Shop All</a>
+</section>

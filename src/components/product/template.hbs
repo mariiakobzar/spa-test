@@ -1,0 +1,93 @@
+<section class="navigation">
+  <div class="container">
+    <div class="navigation-list">
+      <ul>
+        <li class="navigation-list__item">
+          <a href="#">Home</a>
+        </li>
+        <li class="navigation-list__item">
+          <a href="#">SHOP</a>
+        </li>
+        <li class="navigation-list__item">
+          <a href="#">About</a>
+        </li>
+      </ul>
+    </div>
+    <div class="navigation-btns">
+      <ul>
+        <li class="navigation-btns__item">
+          <a href="#">Prev</a>
+        </li>
+        <li class="navigation-btns__item">
+          <a href="#">Next</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <section class="product">
+    <div class="product-image">
+      <div class="product-image__img">
+        \{{{img src}}}
+      </div>
+      <p>
+        I'm a product description. I'm a great place to add more details
+        about your product such as sizing, material,
+        care instructions and cleaning instructions.
+      </p>
+    </div>
+    <div class="product-info">
+      <h3 class="product-info__title">\{{name}}</h3>
+      <p class="product-info__id">SKU: \{{id}}</p>
+      <p>
+        <span class="product-info__price">\{{price}}</span>
+      </p>
+      <label for="select-size">Size</label>
+      <div class="select">
+        <select name="size" id="select-size">
+          <option value="s">Small</option>
+          <option value="l">Large</option>
+        </select>
+      </div>
+      <label for="input-quantity">Quantity</label>
+      <span id="input-number">
+        <input type="number" value="1" id="input-quantity" min="1" onkeypress="return false">
+        <span onclick="this.previousElementSibling.stepUp()"></span>
+        <span onclick="this.previousElementSibling.previousElementSibling.stepDown()"></span>
+      </span>
+      <input type="button" id="add-btn" value="Add To Card">
+
+      <div class="product-filter">
+        <div class="filter-head">
+          <h3>Product Info</h3>
+          <i class="plus  active"><span></span><span></span></i>
+        </div>
+        <div class="filter-body">
+          I'm a product detail. I'm a great place to add more information about your product such as sizing,
+          material, care and cleaning instructions. This is also a great space to write what makes this product
+          special and how your customers can benefit from this item.
+        </div>
+        <div class="filter-head">
+          <h3>Return & Refund Policy</h3>
+          <i class="plus"><span></span><span></span></i>
+        </div>
+        <div class="filter-body visually-hidden">
+          I’m a Return and Refund policy. I’m a great place to let your customers know what to do in case they are
+          dissatisfied with their purchase. Having a straightforward refund or exchange policy is a great way to
+          build trust and reassure your customers that they can buy with confidence.
+        </div>
+        <div class="filter-head">
+          <h3>Shipping Info</h3>
+          <i class="plus"><span></span><span></span></i>
+        </div>
+        <div class="filter-body visually-hidden">
+          I'm a shipping policy. I'm a great place to add more information about your shipping methods, packaging
+          and cost. Providing straightforward information about your shipping policy is a great way to build trust
+          and reassure your customers that they can buy from you with confidence.
+        </div>
+      </div>
+
+  </section>
+</div>

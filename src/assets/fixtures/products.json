@@ -1,0 +1,204 @@
+{
+  "products": [
+    {
+      "name": "Printed Leggings",
+      "id": "0016",
+      "price": "$45.00",
+      "size": ["Small", "Medium", "Large"],
+      "tag": null,
+      "src": "/images/content/leggings1.jpg",
+      "type": "leggings",
+      "color": "gray"
+    },
+    {
+      "name": "Leggings",
+      "id": "0012",
+      "price": "$35.00",
+      "size": ["Small", "Medium", "Large"],
+      "tag": "Best Seller",
+      "src": "/images/content/leggings2.jpg",
+      "type": "leggings",
+      "color": "blue"
+    },
+    {
+      "name": "Leggings",
+      "id": "0008",
+      "price": "$25.00",
+      "size": ["Small", "Medium", "Large"],
+      "tag": null,
+      "src": "/images/content/leggings3.jpg",
+      "type": "leggings",
+      "color": "pink"
+    },
+    {
+      "name": "Leggings",
+      "id": "0004",
+      "price": "$29.00",
+      "size": ["Small", "Medium", "Large"],
+      "tag": "New Arrival",
+      "src": "/images/content/leggings4.jpg",
+      "type": "leggings",
+      "color": "blue"
+    },
+    {
+      "name": "Seamless Bra",
+      "id": "0015",
+      "price": "$35.00",
+      "size": ["Small", "Medium", "Large"],
+      "tag": null,
+      "src": "/images/content/bra1.jpg",
+      "type": "bra",
+      "color": "pink"
+    },
+    {
+      "name": "Sport Bra",
+      "id": "0011",
+      "price": "$25.00",
+      "size": ["Small", "Medium", "Large"],
+      "tag": "Best Seller",
+      "src": "/images/content/bra2.jpg",
+      "type": "bra",
+      "color": "blue"
+    },
+    {
+      "name": "Sport Bra",
+      "id": "0007",
+      "price": "$15.00",
+      "size": ["Small", "Medium", "Large"],
+      "tag": null,
+      "src": "/images/content/bra3.jpg",
+      "type": "bra",
+      "color": "pink"
+    },
+    {
+      "name": "Sport Bra",
+      "id": "0003",
+      "price": "$20.00",
+      "size": ["Small", "Medium", "Large"],
+      "tag": "New Arrival",
+      "src": "/images/content/bra4.jpg",
+      "type": "bra",
+      "color": "gray"
+    },
+    {
+      "name": "Running Top",
+      "id": "0014",
+      "price": "$42.00",
+      "size": ["Small", "Medium", "Large"],
+      "tag": null,
+      "src": "/images/content/top1.jpg",
+      "type": "top",
+      "color": "green"
+    },
+    {
+      "name": "Tank Top",
+      "id": "0010",
+      "price": "$22.00",
+      "size": ["Small", "Medium", "Large"],
+      "tag": "Best Seller",
+      "src": "/images/content/top2.jpg",
+      "type": "top",
+      "color": "blue"
+    },
+    {
+      "name": "Tank Top",
+      "id": "0006",
+      "price": "$12.00",
+      "size": ["Small", "Medium", "Large"],
+      "tag": null,
+      "src": "/images/content/top3.jpg",
+      "type": "top",
+      "color": "purple"
+    },
+    {
+      "name": "Tank Top",
+      "id": "0002",
+      "price": "$18.00",
+      "size": ["Small", "Medium", "Large"],
+      "tag": "New Arrival",
+      "src": "/images/content/top4.jpg",
+      "type": "top",
+      "color": "blue"
+    },
+    {
+      "name": "Essential Jacket",
+      "id": "0013",
+      "price": "$59.00",
+      "size": ["Small", "Medium", "Large"],
+      "tag": null,
+      "src": "/images/content/jacket1.jpg",
+      "type": "jacket",
+      "color": "gray"
+    },
+    {
+      "name": "Jacket",
+      "id": "0009",
+      "price": "$39.00",
+      "size": ["Small", "Medium", "Large"],
+      "tag": "Best Seller",
+      "src": "/images/content/jacket2.jpg",
+      "type": "jacket",
+      "color": "pink"
+    },
+    {
+      "name": "Jacket",
+      "id": "0005",
+      "price": "$29.00",
+      "size": ["Small", "Medium", "Large"],
+      "tag": null,
+      "src": "/images/content/jacket3.jpg",
+      "type": "jacket",
+      "color": "blue"
+    },
+    {
+      "name": "Jacket",
+      "id": "0001",
+      "price": "$45.00",
+      "size": ["Small", "Medium", "Large"],
+      "tag": "New Arrival",
+      "src": "/images/content/jacket4.jpg",
+      "type": "jacket",
+      "color": "blue"
+    },
+    {
+      "name": "Shorts",
+      "id": "0017",
+      "price": "$39.00",
+      "size": ["Small", "Medium", "Large"],
+      "tag": null,
+      "src": "/images/content/shorts1.jpg",
+      "type": "shorts",
+      "color": "red"
+    },
+    {
+      "name": "Shorts",
+      "id": "0018",
+      "price": "$47.00",
+      "size": ["Small", "Medium", "Large"],
+      "tag": "Best Seller",
+      "src": "/images/content/shorts2.jpg",
+      "type": "shorts",
+      "color": "green"
+    },
+    {
+      "name": "Shorts",
+      "id": "0019",
+      "price": "$37.00",
+      "size": ["Small", "Medium", "Large"],
+      "tag": null,
+      "src": "/images/content/shorts3.jpg",
+      "type": "shorts",
+      "color": "blue"
+    },
+    {
+      "name": "Shorts",
+      "id": "0020",
+      "price": "$40.00",
+      "size": ["Small", "Medium", "Large"],
+      "tag": null,
+      "src": "/images/content/shorts4.jpg",
+      "type": "shorts",
+      "color": "gray"
+    }
+  ]
+}

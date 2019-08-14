@@ -1,0 +1,221 @@
+main {
+  background: rgba(232, 230, 230, 1);
+}
+
+.navigation {
+  padding: 150px 0 50px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-list {
+    ul {
+      display: flex;
+    }
+
+    &__item {
+      color: #1F1F1F;
+      font-size: 18px;
+      position: relative;
+      margin-right: 15px;
+
+      &:not(:last-child)::after {
+        content: "/";
+        top: 0;
+        position: absolute;
+        right: -10px;
+      }
+    }
+  }
+
+  &-btns {
+    ul {
+      display: flex;
+    }
+
+    &__item {
+      color: #1F1F1F;
+      font-size: 18px;
+      position: relative;
+      margin-right: 15px;
+
+      &:first-child {
+        padding-left: 5px;
+
+        &::before {
+          content: "<";
+          top: 0;
+          position: absolute;
+          left: -10px;
+        }
+      }
+
+      &:last-child {
+        padding-right: 5px;
+
+        &::after {
+          content: ">";
+          top: 0;
+          position: absolute;
+          right: -10px;
+        }
+      }
+
+      &:not(:last-child)::after {
+        content: "|";
+        top: 0;
+        position: absolute;
+        right: -10px;
+      }
+    }
+  }
+}
+
+.product {
+  display: flex;
+
+  &-image {
+    width: 50%;
+    margin-right: 25px;
+
+    p {
+      font-size: 18px;
+      color: #1F1F1F;
+    }
+
+    &__img {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      padding-bottom: 100%;
+      margin-bottom: 25px;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &-info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &__title {
+      font-size: 40px;
+      color: #ea5823;
+      font-family: 'NeuzeitGrotesk', sans-serif;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+
+    &__id {
+      opacity: .6;
+      margin-bottom: 30px;
+    }
+
+    &__price {
+      font-size: 22px;
+      color: #575757;
+      margin-right: 10px;
+    }
+
+    &__link {
+      color: #adabab;
+      font-size: 14px;
+      border-bottom: 0.5px solid #adabab;
+      transition: 0s;
+
+      &:hover {
+        color: #575757;
+      }
+    }
+
+    label {
+      font-size: 18px;
+      opacity: .6;
+      padding-top: 30px;
+      margin-bottom: 10px;
+    }
+
+    input {
+      font-size: 18px;
+      color: #adabab;
+      height: 50px;
+      width: 100%;
+      border: 1px solid #adabab;
+      padding: 0 15px;
+    }
+  }
+}
+
+.product-filter {
+  width: 100%;
+  cursor: pointer;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+  font-size: 18px;
+  font-weight: normal;
+  border-top: 0.5px solid rgb(199, 199, 199);
+
+  .filter-head {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+    font-size: 18px;
+    font-weight: normal;
+    border-top: 0.5px solid rgb(199, 199, 199);
+
+    h3 {
+      font-weight: normal;
+    }
+
+    & .plus {
+      width: 14px;
+      height: 14px;
+      position: relative;
+
+      span {
+        position: absolute;
+        transition: .3s;
+        background: rgb(199, 199, 199);
+
+        &:first-of-type {
+          top: 0;
+          bottom: 0;
+          width: 2px;
+          left: 6px;
+        }
+
+        &:last-of-type {
+          left: 0;
+          right: 0;
+          height: 2px;
+          top: 6px;
+        }
+      }
+
+      &.active span {
+        transform: rotate(90deg);
+        left: 50%;
+        right: 50%;
+      }
+    }
+  }
+
+  &-body{
+    padding-bottom: 24px;
+    font-size: 16px;
+  }
+}
