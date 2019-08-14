@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel -p 3000 watch src/assets/index.hbs --open",
+    "start": "parcel -p 3000 watch src/assets/index.html --open",
     "build": "parcel build src/assets/index.hbs"
   },
   "author": "Maria Kobzar",
