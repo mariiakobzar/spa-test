@@ -12,7 +12,7 @@
     "express": "^4.17.1",
     "handlebars": "^4.1.2",
     "helpers": "0.0.6",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "js": "^0.1.0",
     "lint-staged": "^9.2.1"
   },
